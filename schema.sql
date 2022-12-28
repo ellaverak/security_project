@@ -1,10 +1,10 @@
 CREATE TABLE users (
     id INTEGER PRIMARY KEY,
-    username TEXT UNIQUE,
+    username TEXT,
     password TEXT
 );
 
-CREATE TABLE references (
+CREATE TABLE saved_references (
     id INTEGER PRIMARY KEY,
     author TEXT,
     name TEXT,

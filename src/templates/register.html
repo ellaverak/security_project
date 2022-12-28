@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 
-<form action="/login" method="POST">
-    User: <br><input type="text" name="username" maxlength="20">
+<form action="/register" method="POST">
+    {% csrf_token %}
+    New user: <br><input type="text" name="username" maxlength="20">
     <p>
-    Password: <br><input type="password" name="password" maxlength="40">
+    New password: <br><input type="password" name="password" maxlength="40">
     <p>
-        <input id="button" type="submit" value="Kirjaudu sisään">
+        <input id="button" type="submit" value="Luo tunnus">
 </form>

@@ -1,6 +1,8 @@
 from django.http import HttpResponse
-from django.shortcuts import render, redirect
+from django.shortcuts import render
 from django.contrib.auth.decorators import login_required
+import pages.controller as controller
+#from pages.db import cursor
 
 
 #@login_required
@@ -15,7 +17,8 @@ def Register(request):
         username = request.POST.get('username')
         password = request.POST.get('password')
 
-        return redirect('index')
+        if controller.register(username, password):
+            return render(request, 'index.html')
 
     return render(request, 'register.html')
 
@@ -24,6 +27,6 @@ def Login(request):
         username = request.POST.get('username')
         password = request.POST.get('password')
 
-        return redirect('index')
+        return render(request, 'index.html')
 
     return render(request, 'login.html')
