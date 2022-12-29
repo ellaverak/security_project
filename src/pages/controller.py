@@ -6,9 +6,6 @@ def connect():
     return db
 
 def register(username, password):
-    #no hash
-    #injection!
-    #default account available
     db = connect()
     try:
         db.execute("INSERT INTO users (username, password) VALUES (?, ?)", [username, password])
@@ -32,9 +29,6 @@ def logout():
     global user_id
     user_id = None
 
-def return_user_id():
-    return user_id
-
 def save(author, name, publisher, year):
     db = connect()
     try:
@@ -51,3 +45,6 @@ def get_references():
     except:
         return []
     return references
+
+def return_user_id():
+    return user_id
