@@ -41,7 +41,6 @@ def Save(request):
         publisher = request.POST.get('publisher')
         year = request.POST.get('year')
 
-        if controller.save(author, name, publisher, year):
-            print("TOIMI")
+        controller.save(author, name, publisher, year)
 
     return redirect('/home')
