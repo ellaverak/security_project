@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 
-<form action="/save" method="POST">
+<a href="/logout">Log out</a>
+<p>
+
+<form action="/save/" method="POST">
+    {% csrf_token %}
     Author: <br><input type="text" name="author">
     <p>
     Name: <br><input type="name" name="name">
@@ -9,7 +13,12 @@
     <p>
     Year: <br><input type="year" name="year">
     <p>
-        <input id="button" type="submit" value="Luo viite">
+        <input id="button" type="submit" value="Save reference">
 </form>
 
 Saved References
+<p>
+{% for reference in references %}
+{{ reference }}
+<p>
+{% endfor %}
