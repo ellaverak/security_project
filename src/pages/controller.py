@@ -18,7 +18,7 @@ def login(username, password):
     db = connect()
     try:
         global user_id
-        user_id = db.execute("SELECT id FROM users WHERE username='"+username+"' AND password='"+username+"'").fetchall()[0]
+        user_id = db.execute("SELECT id FROM users WHERE username='"+username+"' AND password='"+password+"'").fetchall()[0]
         if user_id == None:
             raise
     except:
