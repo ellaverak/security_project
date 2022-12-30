@@ -6,16 +6,16 @@ This project includes the following security flaws:
 **1. Sql-injection**
 - Sql queries vunlerable to injection
 
-2. Broken access control
+**2. Broken access control**
 - Bybassing access control by modifying the url
 
-3. Identification and authentication failures
+**3. Identification and authentication failures**
 - Uses plain text when storing passwords
 
-4. Security misconfiguration
+**4. Security misconfiguration**
 - Default accounts and passwords are enabled
 
-5. Vulnerable and outdated components 
+**5. Vulnerable and outdated components** 
 - Uses an old version of django
 
 1. Run:
