@@ -21,7 +21,7 @@ This project is a simple program for saving references. It includes the followin
 ## Installation for linux
 
 1. Download the project file from here:
-[Security_project v 2.1](https://github.com/ellaverak/security_project/releases/tag/security_project_2_1)
+[Security_project v 2.2](https://github.com/ellaverak/security_project/releases/tag/security_project_2_2)
 2. Navigate to the root of the project file
 4. Install virtual environment:
 ```bash
