@@ -1,4 +1,5 @@
 import sqlite3
+#from werkzeug.security import generate_password_hash, check_password_hash
 
 def connect():
     db = sqlite3.connect("src/db.sqlite3")
@@ -7,8 +8,12 @@ def connect():
 
 def register(username, password):
     db = connect()
+    #hash_value = generate_password_hash(password)
     try:
+        #INJECTION
+        #IDENTIFICATION AND AUTHENTICATION FAILURES
         db.execute("INSERT INTO users (username, password) VALUES ('"+username +"', '"+password+"')")
+        #db.execute("INSERT INTO users (username, password) VALUES (?, ?)", [username, hash_value])
         db.commit()
     except:
         return False
@@ -17,10 +22,17 @@ def register(username, password):
 def login(username, password):
     db = connect()
     try:
+        #INJECTION
+        #IDENTIFICATION AND AUTHENTICATION FAILURES
         global user_id
         user_id = db.execute("SELECT id FROM users WHERE username='"+username+"' AND password='"+password+"'").fetchall()[0]
+        user_id = user_id[0]
+        #user = db.execute("SELECT id, password FROM users WHERE username=?", [username]).fetchall()[0]
+        #user_id = user[0]
         if user_id == None:
             raise
+        #if user_id == None or not check_password_hash(user[1], password):
+        #    raise
     except:
         return False
     return True
