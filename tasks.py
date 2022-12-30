@@ -8,3 +8,7 @@ def start(ctx):
 def migrate(ctx):
     ctx.run("python src/manage.py makemigrations", pty=True)
     ctx.run("python3 src/manage.py migrate", pty=True)
+
+#@task
+#def build(ctx):
+#    ctx.run("python3 src/build.py", pty=True)
