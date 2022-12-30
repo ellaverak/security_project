@@ -18,6 +18,8 @@ This project includes the following security flaws:
 **5. Vulnerable and outdated components** 
 - Uses an old version of django
 
+##Installation
+
 1. Run:
 ```bash
 python3 src/manage.py runserver
