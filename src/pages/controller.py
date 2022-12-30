@@ -44,7 +44,7 @@ def logout():
 def save(author, name, publisher, year):
     db = connect()
     try:
-        db.execute("INSERT INTO saved_references (author, name, publisher, year, user_id) VALUES (?, ?, ?, ?, ?)", [author, name, publisher, year, user_id[0]])
+        db.execute("INSERT INTO saved_references (author, name, publisher, year, user_id) VALUES (?, ?, ?, ?, ?)", [author, name, publisher, year, user_id])
         db.commit()
     except:
         return False
@@ -53,7 +53,7 @@ def save(author, name, publisher, year):
 def get_references():
     db = connect()
     try:
-        references = db.execute("SELECT author, name, publisher, year FROM saved_references WHERE user_id = ?", [user_id[0]]).fetchall()
+        references = db.execute("SELECT author, name, publisher, year FROM saved_references WHERE user_id = ?", [user_id]).fetchall()
     except:
         return []
     return references
