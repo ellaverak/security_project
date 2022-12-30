@@ -18,7 +18,7 @@ This project includes the following security flaws:
 **5. Vulnerable and outdated components** 
 - Uses an old version of django
 
-##Installation
+## Installation
 
 1. Run:
 ```bash
