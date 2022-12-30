@@ -20,6 +20,22 @@ This project includes the following security flaws:
 
 ## Installation
 
+1. Download the project file
+2. Navigate to the root of the project file
+4. Install virtual environment:
+```bash
+python3 -m venv venv
+```
+5. Activate virtual environment:
+```bash
+source venv/bin/activate
+```
+6. Install requirements:
+```bash
+pip install requirements.txt
+```
+
+
 1. Run:
 ```bash
 python3 src/manage.py runserver
