@@ -1,7 +1,7 @@
 # security_project
 
 Cyber Security Base 2022 Project 1, created to demonstrate different security issues.
-This project includes the following security flaws:
+This project is a simple program for saving references. It includes the following security flaws:
 
 **1. Sql-injection**
 - Sql queries vunlerable to injection
