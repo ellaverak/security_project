@@ -51,7 +51,7 @@ invoke start
 3. Stop running:
 CONTROL-C
 
-4. Deactivate virtual enviroment
+4. Deactivate virtual enviroment:
 ```bash
 deactivate
 ```
