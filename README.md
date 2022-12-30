@@ -18,7 +18,7 @@ This project includes the following security flaws:
 **5. Vulnerable and outdated components** 
 - Uses an old version of django
 
-## Installation
+## Installation for linux
 
 1. Download the project file
 2. Navigate to the root of the project file
@@ -34,9 +34,25 @@ source venv/bin/activate
 ```bash
 pip install requirements.txt
 ```
-
-
-1. Run:
+7. Make django migrations:
 ```bash
-python3 src/manage.py runserver
+invoke migrate
 ```
+## Running
+
+1. Activate virtual environment:
+```bash
+source venv/bin/activate
+```
+2. Run:
+```bash
+invoke start
+```
+3. Stop running:
+CONTROL-C
+
+4 Deactivate virtual enviroment
+```bash
+deactivate
+```
+
