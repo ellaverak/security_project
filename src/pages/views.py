@@ -6,6 +6,13 @@ def Index(request):
     return render(request, 'index.html')
 
 def Home(request):
+    #try:
+    #    user_id = controller.return_user_id()
+    #    if user_id == None:
+    #        raise
+    #except:
+    #    return redirect('/')
+    #BROKEN ACCESS CONTROL
     references = controller.get_references()
     return render(request, 'home.html', {'references': references})
 
